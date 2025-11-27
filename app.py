@@ -36,4 +36,5 @@ df = pd.DataFrame({
 if st.button("Generate Price"):
     scaled_df = scaler.transform(df)
     prediction = model.predict(scaled_df)[0]
-    st.success(f"House Price: $ {prediction:*100000,.2f}")
+    st.success(f"House Price: $ {prediction * 100000:.2f}")
+
