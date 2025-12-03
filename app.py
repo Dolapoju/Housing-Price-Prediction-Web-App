@@ -9,11 +9,11 @@ with open("scaler.pkl", "rb") as file:
     scaler = pickle.load(file)
 st.title("Housing Price Prediction Application")
 st.write("Please describe the features of the house, in order to get a prediction on the valuation:")
+ st.write("Note: Take your income and divide it by 10,000 and then input in MedInc")
 
 col1, col2 = st.columns(2)
 
 with col1:
-    st.write("Note: Take your income and divide it by 10,000 and then input in MedInc")
     MedInc = st.number_input("Input the Income of the home owners($)", min_value=1.0, step=1.0)
     AveRooms = st.number_input("How many rooms in the House?", min_value=1.0,step=1.0)
     HouseAge = st.number_input("Age of House?", min_value=1.0,step=1.0)
