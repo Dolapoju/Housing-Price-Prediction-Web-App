@@ -13,14 +13,15 @@ st.write("Please describe the features of the house, in order to get a predictio
 col1, col2 = st.columns(2)
 
 with col1:
-    MedInc = st.number_input("Input the Income of the home owners($)", min_value=0.0, step=10000.0)
-    AveRooms = st.number_input("How many rooms in the House?", min_value=0.0,step=1.0)
-    HouseAge = st.number_input("Age of House?", min_value=0.0,step=1.0)
+    st.write("Note: Take your income and divide it by 10,000 and then input in MedInc")
+    MedInc = st.number_input("Input the Income of the home owners($)", min_value=1.0, step=1.0)
+    AveRooms = st.number_input("How many rooms in the House?", min_value=1.0,step=1.0)
+    HouseAge = st.number_input("Age of House?", min_value=1.0,step=1.0)
  
 with col2:
-    AveBedrms = st.number_input("Number of Bedrooms?", min_value=0.0, step=1.0)
-    Longitude = st.number_input("Longitude?", step=1.0)
-    Latitude = st.number_input("Latitude?", step=1.0)
+    AveBedrms = st.number_input("Number of Bedrooms?", min_value=1.0, step=1.0)
+    Longitude = st.number_input("Longitude?", step=1.0, min_value=-124.4, max_value=-114.1)
+    Latitude = st.number_input("Latitude?", step=1.0, min_value=32.5, max_value=42)
 
 
 df = pd.DataFrame({
