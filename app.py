@@ -21,7 +21,7 @@ with col1:
 with col2:
     AveBedrms = st.number_input("Number of Bedrooms?", min_value=1.0, step=1.0)
     Longitude = st.number_input("Longitude?", step=1.0, min_value=-124.4, max_value=-114.1)
-    Latitude = st.number_input("Latitude?", step=1.0, min_value=32.5, max_value=42)
+    Latitude = st.number_input("Latitude?", step=1.0, min_value=32.5, max_value=42.0)
 
 
 df = pd.DataFrame({
